@@ -424,6 +424,10 @@ button:focus,
   text-align: left;
 }
 
+.send__message  {
+  text-align: center;
+}
+
 /* Send message button*/
 .send_message {
   /* overwrites browser defaults and resets the border */
@@ -471,4 +475,17 @@ button:focus,
   flex-direction: column;
   text-align: center;
   margin-bottom: 60px;
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-self: center;
+}
+
+.social__media {
+  width: 30px;
+  height: 30px;
+  padding: 3px;
 }
