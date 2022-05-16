@@ -66,12 +66,14 @@ hr {
 }
 
 /* Page Header (including Name and Menu options) */
-.page-header {
-  display: grid;
-  width: 100%;
-  padding: 5px;
-  margin-left: 5px;
-  grid-template-columns: 1fr 1fr;
+@supports (display: grid) {
+  .page-header {
+    display: grid;
+    width: 100%;
+    padding: 5px;
+    margin-left: 5px;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .name {
@@ -140,6 +142,45 @@ div.menu2 a:hover::after {
   width: 100%;
 }
 
+@media all and (max-width: 500px) {
+  .page-header {
+    grid-template-columns: none;
+    grid-template-rows: 1fr 1fr;
+  }
+  .name {
+    text-align: center;
+    font-size: auto;
+  }
+  div.menu2 {
+    text-align: center;
+  }
+  div.menu2 a {
+    font-size: 0.9rem;
+  }
+}
+
+@media all and (min-width: 500px) and (max-width: 900px) {
+  .page-header {
+    grid-template-columns: none;
+    grid-template-rows: 1fr 1fr;
+  }
+  .name,
+  div.menu2 {
+    text-align: center;
+  }
+}
+
+@media all and (max-width: 900px) {
+  .page-header {
+    grid-template-columns: none;
+    grid-template-rows: 1fr 1fr;
+  }
+  .name,
+  div.menu2 {
+    text-align: center;
+  }
+}
+
 /* Home Page Coding */
 .profile {
   max-width: 700px;
@@ -195,10 +236,13 @@ div.menu2 a:hover::after {
   align-items: center;
 }
 
-#skills {
+@supports (display: table) {
+  #skills {
   font-family: "Kalam", sans-serif;
   border-collapse: collapse;
   width: 100%;
+  margin: 10px;
+  }
 }
 
 #skills td,
@@ -224,6 +268,30 @@ div.menu2 a:hover::after {
 
 .about__me {
   text-align: center;
+}
+
+@media all and (max-width: 500px) {
+  #skills {
+    width: auto;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+@media all and (min-width: 500px) and (max-width: 900px) {
+  #skills {
+    width: auto;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+@media all and (max-width: 900px) {
+  #skills {
+    width: auto;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
 }
 
 .button,
@@ -399,6 +467,9 @@ button:focus,
 @media all and (max-width: 500px) {
   .grid {
     grid-template-columns: 1fr;
+  }
+  .grid__item {
+    font-size: 12;
   }
 }
 
