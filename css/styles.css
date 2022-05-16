@@ -1,0 +1,471 @@
+:root {
+  --fontf: "Kalam", "Courgette", "Water Brush", "sans-serif";
+  --fontw: 400;
+  --fonts: 20px;
+  --line-height: 1.6;
+  --color1: #fff;
+  --color2: #737576ff;
+  --color3: #ddd;
+  --color4: #ff9900ff;
+  --color5: #2b2b2b;
+  --color6: #3535c7ff;
+  --color7: #bfbfc1;
+  --color8: #fcffad;
+  --color9: #edc655;
+  --color10: #f76414;
+  --color11: #f9de75ff;
+  --color12: #f78614ff;
+}
+
+.h-shared, h3, h2, h1 {
+  font-family: "Courgette", "sans-serif";
+  font-weight: 700;
+}
+
+.skills-shared, #skills tr, #skills th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+}
+
+.hover-shared, .send_message:hover, .send_message:focus, .code:hover, .code:focus {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+body {
+  background-color: var(--color2);
+  /* sets the background color of the webpage*/
+  font-family: var(--fontf);
+  /* sets the font style from first to last options*/
+  font-weight: var(--fontw);
+  /*sets the font boldness*/
+  font-size: var(--fonts);
+  /*sets the font size*/
+  line-height: var(--line-height);
+  /*sets the line hight that the font is written on*/
+  color: var(--color1);
+  /*sets the color of the font for the whole page*/
+}
+
+h1 {
+  font-size: 30px;
+  /*font-family: 'Courgette', 'sans-serif';
+  font-weight: 700;*/
+}
+
+h2 {
+  font-size: 24px;
+  /*font-family: 'Courgette', 'sans-serif';
+  font-weight: 700;*/
+}
+
+h3 {
+  font-size: 18px;
+  /*font-family: 'Courgette', 'sans-serif';
+  font-weight: 700;*/
+}
+
+* {
+  box-sizing: border-box;
+}
+
+hr {
+  background-color: var(--color1);
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.55));
+}
+
+/* Page Header (including Name and Menu options)*/
+.page-header {
+  display: grid;
+  width: 100%;
+  padding: 5px;
+  margin-left: 5px;
+  grid-template-columns: 1fr 1fr;
+}
+
+.name {
+  margin: 2px;
+  padding-top: 5px;
+  padding-left: 5px;
+  text-align: left;
+}
+
+div.menu2 {
+  margin: 2px;
+  padding-top: 10px;
+  padding-right: 5px;
+  text-align: right;
+}
+
+div.menu2 a {
+  color: var(--color1);
+  text-decoration: none;
+  font: 20px Kalam;
+  margin: 5px 5px;
+  padding: 3px 10px;
+  position: relative;
+  z-index: 0;
+  cursor: pointer;
+}
+
+div.menu2 {
+  background: none;
+}
+
+div.menu2 a:before, div.menu2 a:after {
+  position: absolute;
+  opacity: 1;
+  height: 100%;
+  width: 2px;
+  content: "";
+  background: var(--color4);
+  transition: all 0.3s;
+}
+
+div.menu2 a:before {
+  left: 0px;
+  top: 0px;
+}
+
+div.menu2 a:after {
+  right: 0px;
+  bottom: 0px;
+}
+
+div.menu2 a:hover:before, div.menu2 a:hover:after {
+  opacity: 0.5;
+  height: 2px;
+  width: 100%;
+}
+
+/* Home Page Coding*/
+.profile {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.profile__image {
+  width: 200px;
+  float: left;
+  margin-right: 40px;
+  border-radius: 50%;
+  box-shadow: 0 4px 18px 0 rgba(255, 255, 255, 0.4);
+}
+
+.code:link {
+  font-family: var(--fontf);
+  font-size: 20px;
+  text-decoration: none;
+  color: var(--color4);
+}
+
+.code:visited {
+  /*visited link*/
+  color: var(--color4);
+}
+
+.code:hover, .code:focus {
+  /* lets the mouse appear as a hand when hovering over the button */
+  /*changes the opacity of the button*/
+  color: var(--color1);
+}
+
+.code:active {
+  /*selected link*/
+  color: var(--color1);
+}
+
+/* About Page Coding*/
+.about__me {
+  clear: both;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+
+#skills {
+  font-family: "Kalam", sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#skills td, #skills th {
+  border: 1px solid #2b2b2b;
+  padding: 8px;
+}
+
+#skills tr:hover {
+  background-color: var(--color5);
+  color: var(--color3);
+}
+
+#skills th {
+  background-color: var(--color4);
+  color: var(--color5);
+}
+
+#skills tr {
+  background-color: var(--color3);
+  color: var(--color5);
+}
+
+.about__me {
+  text-align: center;
+}
+
+.button, button {
+  /* overwrites browser defaults and resets the border*/
+  border: none;
+  display: inline-block;
+  /* takes the font from the outer container*/
+  font-family: inherit;
+  /* styles the button*/
+  background-color: Orange;
+  color: #2b2b2b;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 3px;
+  /* width of the border, type, color*/
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  transition: 0.4s font-size;
+}
+
+button:hover,
+button:focus,
+.button:hover,
+.button:focus {
+  /* lets the mouse appear as a hand when hovering over the button*/
+  cursor: pointer;
+  /* reduces the opacity of the button to 80%*/
+  opacity: 0.8;
+  font-size: 20px;
+}
+
+/* Animation code */
+.animation {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: inherit;
+  height: inherit;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.picture {
+  justify-self: center;
+  padding: 2px;
+  position: relative;
+  width: 100%;
+}
+
+.svg {
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: 0 4px 18px 0 rgba(255, 255, 255, 0.4);
+  transition: all ease-in-out 0.2s;
+}
+
+.picture > a {
+  position: absolute;
+  bottom: 1px;
+  left: 135px;
+  transform: translate(-50%, -50%);
+  color: var(--color1);
+  visibility: hidden;
+  z-index: 2;
+  transition: all ease-in-out 0.2s;
+}
+
+.picture:hover > a {
+  visibility: visible;
+}
+
+@keyframes cloud-move {
+  from {
+    transform: translate(0, 0px);
+  }
+  to {
+    transform: translate(200px, 0px);
+  }
+}
+@keyframes cloud-change {
+  0% {
+    fill: var(--color1);
+  }
+  50% {
+    fill: var(--color7);
+  }
+  100% {
+    fill: var(--color5);
+  }
+}
+.cloud-front {
+  animation: 17s cloud-move, 17s cloud-change infinite alternate linear;
+}
+
+@keyframes sun-change {
+  0% {
+    fill: var(--color8);
+  }
+  50% {
+    fill: var(--color9);
+  }
+  100% {
+    fill: var(--color10);
+  }
+}
+@keyframes sun-move {
+  from {
+    transform: translate(0, 0px);
+  }
+  to {
+    transform: translate(0px, -200px);
+  }
+}
+.sun {
+  animation: 17s sun-change, 17s sun-move 1 alternate linear;
+}
+
+@keyframes background-change {
+  0% {
+    fill: var(--color1);
+  }
+  65% {
+    fill: var(--color11);
+  }
+  100% {
+    fill: var(--color12);
+  }
+}
+.background {
+  animation: 17s background-change, 1 alternate linear;
+}
+
+/* Work Page Coding*/
+.workexp {
+  text-align: center;
+}
+
+.grid__item {
+  display: inline-block;
+  width: 33%;
+}
+
+@supports (display: grid) {
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    margin: 10px;
+  }
+
+  .grid__item {
+    background-color: var(--color5);
+    color: var(--color1);
+    width: auto;
+    min-height: auto;
+    margin: 0;
+    padding: 15px;
+  }
+
+  .grid__item:last-child {
+    grid-column: 3/3;
+    grid-row: 1/3;
+  }
+}
+@media all and (max-width: 500px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media all and (min-width: 500px) and (max-width: 750px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media all and (max-width: 750px) {
+  .grid {
+    grid-gap: 10px;
+  }
+
+  .grid__item:last-child {
+    grid-column: auto/auto;
+    grid-row: auto/auto;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+}
+
+/* Contact Page Coding*/
+.contact {
+  clear: both;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+
+.address {
+  list-style-type: none;
+  position: relative;
+  top: 5px;
+}
+
+.address, .contact__details, .form {
+  text-align: left;
+}
+
+/* Send message button*/
+.send_message {
+  /* overwrites browser defaults and resets the border */
+  border: none;
+  /* takes the font from the outer container */
+  font-family: sans-serif;
+  /* styles the background color, font color, and text decoration (underline, etc.) of the button */
+  background-color: var(--color4);
+  color: var(--color5);
+  text-decoration: none;
+  /*adds spacing to the button (this will be discussed more in-depth later) */
+  padding: 3px;
+  border-radius: 4px;
+  /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  transition: 0.4s font-size;
+}
+
+.send_message:link {
+  color: var(--color4);
+}
+
+.send_message:visited {
+  /*visited link*/
+  color: var(--color1);
+}
+
+.send_message:hover, .send_message:focus {
+  /* lets the mouse appear as a hand when hovering over the button
+  cursor: pointer;
+  /* reduces the opacity of the button to 80%
+  opacity: 0.8;*/
+  font-size: 20px;
+}
+
+.send_message:active {
+  /*selected link*/
+  color: var(--color6);
+}
+
+/* Page Footer for all Pages*/
+.page-footer {
+  clear: both;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 60px;
+}
