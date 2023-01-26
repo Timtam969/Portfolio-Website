@@ -147,13 +147,16 @@ div.menu2 a:hover::after {
     grid-template-columns: none;
     grid-template-rows: 1fr 1fr;
   }
+
   .name {
     text-align: center;
     font-size: auto;
   }
+
   div.menu2 {
     text-align: center;
   }
+
   div.menu2 a {
     font-size: 0.7rem;
   }
@@ -164,6 +167,7 @@ div.menu2 a:hover::after {
     grid-template-columns: none;
     grid-template-rows: 1fr 1fr;
   }
+
   .name,
   div.menu2 {
     text-align: center;
@@ -175,6 +179,7 @@ div.menu2 a:hover::after {
     grid-template-columns: none;
     grid-template-rows: 1fr 1fr;
   }
+
   .name,
   div.menu2 {
     text-align: center;
@@ -238,10 +243,10 @@ div.menu2 a:hover::after {
 
 @supports (display: table) {
   #skills {
-  font-family: "Kalam", sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-  margin: 10px;
+    font-family: "Kalam", sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    margin: 10px;
   }
 }
 
@@ -296,15 +301,19 @@ div.menu2 a:hover::after {
 
 .button,
 button {
-  border: none; /* overwrites browser defaults and resets the border */
+  border: none;
+  /* overwrites browser defaults and resets the border */
   display: inline-block;
-  font-family: inherit; /* takes the font from the outer container */
-  background-color: Orange; /* styles the button */
+  font-family: inherit;
+  /* takes the font from the outer container */
+  background-color: Orange;
+  /* styles the button */
   color: #2b2b2b;
   text-decoration: none;
   padding: 10px;
   border-radius: 3px;
-  border-bottom: 2px solid rgba(0, 0, 0, 0.3); /* width of the border, type, color */
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  /* width of the border, type, color */
   transition: 0.4s font-size;
 }
 
@@ -312,8 +321,10 @@ button:hover,
 button:focus,
 .button:hover,
 .button:focus {
-  cursor: pointer; /* lets the mouse appear as a hand when hovering over the button */
-  opacity: 0.8; /* reduces the opacity of the button to 80% */
+  cursor: pointer;
+  /* lets the mouse appear as a hand when hovering over the button */
+  opacity: 0.8;
+  /* reduces the opacity of the button to 80% */
   font-size: 20px;
 }
 
@@ -341,7 +352,7 @@ button:focus,
   transition: all ease-in-out 0.2s;
 }
 
-.picture > a {
+.picture>a {
   position: absolute;
   bottom: 1px;
   left: 135px;
@@ -352,7 +363,7 @@ button:focus,
   transition: all ease-in-out 0.2s;
 }
 
-.picture:hover > a {
+.picture:hover>a {
   visibility: visible;
 }
 
@@ -443,7 +454,7 @@ button:focus,
 @supports (display: grid) {
   .grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-gap: 20px;
     margin: 10px;
   }
@@ -459,8 +470,8 @@ button:focus,
   }
 
   .grid__item:last-child {
-    grid-column: 3/3;
-    grid-row: 1/3;
+    grid-column: 2/2;
+    /* grid-row: 2/2; */
   }
 }
 
@@ -468,6 +479,7 @@ button:focus,
   .grid {
     grid-template-columns: 1fr;
   }
+
   .grid__item {
     font-size: 12;
   }
@@ -521,14 +533,19 @@ button:focus,
 
 /* Send message button */
 .send_message {
-  border: none; /* overwrites browser defaults and resets the border */
-  font-family: sans-serif; /* takes the font from the outer container */
-  background-color: #f90f; /* styles the background color, font color, and text decoration (underline, etc.) of the button */
+  border: none;
+  /* overwrites browser defaults and resets the border */
+  font-family: sans-serif;
+  /* takes the font from the outer container */
+  background-color: #f90f;
+  /* styles the background color, font color, and text decoration (underline, etc.) of the button */
   color: #2b2b2b;
   text-decoration: none;
-  padding: 3px; /* adds spacing to the button (this will be discussed more in-depth later) */
+  padding: 3px;
+  /* adds spacing to the button (this will be discussed more in-depth later) */
   border-radius: 4px;
-  border-bottom: 2px solid rgba(0, 0, 0, 0.3); /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
   transition: 0.4s font-size;
 }
 
@@ -545,7 +562,8 @@ button:focus,
   font-size: 20px;
 }
 
-.send_message:active { /* selected link */
+.send_message:active {
+  /* selected link */
   color: #3535c7ff;
 }
 
